@@ -1,12 +1,12 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-###demo简介:
+### demo简介:
 此demo是使用React脚手架（create-react-app）,实现 “ 增删该查 ” 功能的小实例，看懂这个实例，你就已经基本掌握了react脚手架的基本技术，后期再进行更复杂的技术学习。
 
 
 
 
-###demo涉及的React技术点：
+### demo涉及的React技术点：
 1.JSX
 2.元素渲染
 3.组件 & Props
