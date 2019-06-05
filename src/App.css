@@ -1,0 +1,13 @@
+
+.App{
+    width:30%;
+    margin:0 auto;
+}
+.List{
+    margin-top:20px;
+}
+.flex_li{
+    display:flex;
+    justify-content: space-between;
+    margin-top:6px;
+}
