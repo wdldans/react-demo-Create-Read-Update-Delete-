@@ -1,7 +1,9 @@
 import React from 'react';
 import './App.css';
-import Input from './components/Input/Input'
+import InputCom from './components/InputCom/InputCom'
 import List from './components/List/List';
+import 'antd/dist/antd.css';
+
 
 
 
@@ -10,7 +12,7 @@ class Todolist extends React.Component{
     super(props);
     this.state = {
       inputValue:'',
-      list:['aa','bb','cc'],
+      list:[],
       mod:'',
     }
   }
@@ -28,10 +30,6 @@ class Todolist extends React.Component{
     })
   }
 
-  componentDidUpdate() {
-    console.log(this.state.list)
-  }
-  
 
   handleClickDel(index) {
     const list = this.state.list;
@@ -68,7 +66,7 @@ class Todolist extends React.Component{
   render() {
     return (
       <div className="App">
-        <Input 
+        <InputCom 
           inputValue={this.state.inputValue} 
           onChange={this.handleInputChange.bind(this)} 
           onAdd={this.handleButtonSubmit.bind(this)}

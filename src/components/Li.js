@@ -1,4 +1,5 @@
 import React from 'react';
+import {Input,Button} from 'antd';
 
 class Li extends React.Component{
     constructor(props) {
@@ -18,8 +19,6 @@ class Li extends React.Component{
             isMod: true,
             inputValue:this.props.item,
         })
-        console.log(this.state.inputValue)
-
     }
 
     handleClickConfirm(index) {
@@ -31,30 +30,28 @@ class Li extends React.Component{
     }
 
     onChangeValue(e) {
-        console.log(e.target.value)
         this.setState({
             inputValue: e.target.value,
         })
     }
 
     render() {
-        const index = this.props.index;
-        const item = this.props.item;
+        const {index,item} = this.props;
         return (
             <div className="flex_li">
                 {
                     this.state.isMod === false 
                     ? <div>{item}</div> 
-                    : <input value={this.state.inputValue} onChange={this.onChangeValue.bind(this)} />
+                    : <Input value={this.state.inputValue} onChange={this.onChangeValue.bind(this)} style={{width:'400px'}} />
                 }
                 
                 <div>
-                    <button onClick={this.handleClickDel.bind(this,index)}>删除</button>
+                    <Button onClick={this.handleClickDel.bind(this,index)}>删除</Button>
                     
                     {
                         this.state.isMod === false 
-                        ? <button onClick={this.handleClickMod.bind(this,index)}>修改</button> 
-                        : <button onClick={this.handleClickConfirm.bind(this,index)}>确定</button>
+                        ? <Button onClick={this.handleClickMod.bind(this,index)}>修改</Button> 
+                        : <Button onClick={this.handleClickConfirm.bind(this,index)}>确定</Button>
                     }
                 </div>
             </div>

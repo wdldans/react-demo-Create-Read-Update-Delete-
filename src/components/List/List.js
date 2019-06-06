@@ -21,7 +21,7 @@ class List extends React.Component{
       }
 
     render() {
-        const list = this.props.list;
+        const {list} = this.props;
         return (
             <div className="List">
                 {list.map((item,index)=>{
